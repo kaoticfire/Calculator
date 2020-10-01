@@ -4,53 +4,53 @@ using namespace std;
 
 class BasicMath{
 public:
-    int addnum(int x, int y){
+    double addnum(double x, double y){
         return x + y;
     }
-    int subnum(int x, int y){
+    double subnum(double x, double y){
         return x - y;
     }
-    int multnum(int x, int y){
+    double multnum(double x, double y){
         return x * y;
     }
-    int divnum(int x, int y){
+    double divnum(double x, double y){
         return x / y;
     }
-    int modnum(int x, int y){
+    long long int modnum(long long int x, long long int y){
         return x % y;
     }
 };
 int main()
 {
     char answer;
-    int x;
-    int y;
-    cout << "Pick a number: \n";
+    double x;
+    double y;
+    cout << "Pick a number: " << std::endl;
     cin >> x;
-    cout << "Pick another number: \n";
+    cout << "Pick another number: " << std::endl;
     cin >> y;
-    cout << "What math operation would you like to do? \n";
-    cout << "(A)dd Numbers \n";
-    cout << "(S)ubtract Numbers \n";
-    cout << "(M)ultiply Numbers \n";
-    cout << "(D)ivide Numbers \n";
-    cout << "(G)et the remainder of Numbers \n";
+    cout << "What math operation would you like to do? " << std::endl;
+    cout << "(A)dd Numbers " << std::endl;
+    cout << "(S)ubtract Numbers " << std::endl;
+    cout << "(M)ultiply Numbers " << std::endl;
+    cout << "(D)ivide Numbers " << std::endl;
+    cout << "(G)et the remainder of Numbers " << std::endl;
     cin >> answer;
     BasicMath bm;
     if (answer == 'A'){
-        cout << bm.addnum(x, y) << endl;
+        cout << bm.addnum(x, y) << std::endl;
     } else if (answer == 'S'){
-        cout << bm.subnum(x, y) << endl;
+        cout << bm.subnum(x, y) << std::endl;
     } else if (answer == 'M'){
-        cout << bm.multnum(x, y) << endl;
+        cout << bm.multnum(x, y) << std::endl;
     } else if (answer == 'D'){
         if (x < 0 || y < 0){
-            cout << "Invalid Numbers. \n";
+            cout << "Invalid Numbers. " << std::endl;
         } else {
-            cout << bm.divnum(x, y) << endl;
+            cout << bm.divnum(x, y) << std::endl;
         }
     } else if (answer == 'G'){
-        cout << bm.modnum(x, y) << endl;
+        cout << bm.modnum(x, y) << std::endl;
     } else {
         cout << "Invalid Choice. \n";
     }
