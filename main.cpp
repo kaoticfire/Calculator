@@ -54,6 +54,5 @@ int main()
     obj2.cal();
     obj.show();
     obj2.show();
-    obj()
     return 0;
 }
